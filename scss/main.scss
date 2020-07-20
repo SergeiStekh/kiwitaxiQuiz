@@ -1,29 +1,8 @@
+@import './_fonts';
+@import './_bindings';
+@import './_mixins';
+@import './_body';
+@import './nav-bar/_nav-bar';
 @import './progress-bar/_progress-bar';
 @import './button/button';
 @import './introduction/_introduction';
-@import './_fonts';
-
-$max-width: 1440px;
-$font-family:   'Open Sans', sans-serif;
-$main-color: #000000;
-$gray-color: #E5E5E5;
-$gray-border-color: #6F7F8F;
-$gray-disclaimer-color: #6F7F8F;
-$green-color: #26A65B;
-$yellow-color: #FFB300;
-$gray-text-color: rgba(111, 127, 143, 0.7);
-
-
-
-@mixin getSizeInPercents($blockSize, $parentSize) {
-  width: $blockSize / $parentSize * 100%;
-}
-
-@mixin setFont($fontSize, $lineHeight, $color) {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: normal;
-  font-size: $fontSize;
-  line-height: $lineHeight;
-  color: $color;
-}

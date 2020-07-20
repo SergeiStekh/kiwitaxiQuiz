@@ -1,0 +1,12 @@
+html {
+  min-height: 100vh;
+  min-width: $min-width;
+}
+
+body {
+  font-family: $font-family;
+  box-sizing: border-box;
+  color: $main-color;
+  margin: 0;
+  padding: 0;
+}

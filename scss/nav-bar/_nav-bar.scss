@@ -1,0 +1,114 @@
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 24px 0px 40px;
+  box-shadow: 0px 2px 16px rgba(55, 63, 71, 0.15);
+  &--fixed {
+    position: fixed;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 64px;
+  white-space: nowrap;
+}
+  
+.logo {
+  width: 120px;
+  height: 46px;
+  background-image: url('../../images/kiwitaxi-logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &--margin {
+    margin: 0 45px 0 8px;
+  }
+}
+
+.menu {
+  min-width: 564px;
+  display: flex;
+  justify-content: space-between;
+  
+  &--margin {
+    margin-right: (131 / 1440) * 100%;
+  }
+  
+  & > a {
+    display: block;
+    text-decoration: none;
+  }
+
+  &__item-label {
+    @include setFont(13px, 16px, #6F7F8F);
+  }
+
+  &__item-arrow {
+    background: url("../../images/arrow-down.png") no-repeat scroll right 9px transparent; 
+    
+    &--padding {
+      padding: 0 17px 0 0;
+    }
+  }
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 329px;
+
+  &__separator {
+    background-image: url('../../images/separator.png');
+    width: 1px;
+    height: 30px;
+  }
+
+  &__help {
+    text-decoration: none;
+    @include setFont(13px, 16px, #6F7F8F);
+  }
+}
+
+.dropdown-currency {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  @include setFont(13px, 16px, #6F7F8F);
+
+  &--margin {
+    margin-top: 4px;
+  }
+}
+
+.dropdown-country {
+  display: flex;
+  width: 26px;
+  height: 17px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &__flag {
+    background-image: url('../../images/flag.png');
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.login-btn {
+  width: 104px;
+  height: 32px;
+  @include setFont(13px, 16px, #6F7F8F);
+  border: 1px solid #6F7F8F;
+  border-radius: 6px;
+  background-color: #fff;
+}

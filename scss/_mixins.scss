@@ -1,0 +1,12 @@
+@mixin getSizeInPercents($blockSize, $parentSize) {
+  width: $blockSize / $parentSize * 100%;
+}
+
+@mixin setFont($fontSize, $lineHeight, $color) {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $color;
+}
