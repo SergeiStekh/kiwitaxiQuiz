@@ -172,6 +172,20 @@ input[type="password"]::-ms-reveal {
   margin: 0 0 20px 0;
 }
 
+.question--no-margin {
+  margin-bottom: 0;
+}
+
+.question__confidential {
+  margin-top: 0;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6F7F8F;
+}
+
 .introduction {
   position: relative;
   font-family: 'Open Sans';
@@ -421,4 +435,61 @@ input[type="password"]::-ms-reveal {
 
 .next-btn:hover {
   background-color: #FFB300;
+}
+
+.checkout-block {
+  width: 66.25%;
+  max-width: 944px;
+  border: 1px solid #fff;
+  box-shadow: 4px 4px 7px #E5E5E5;
+  border-radius: 8px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.checkout__wrapper {
+  padding: 20px 113px 42px 59px;
+}
+
+.heart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart__img {
+  width: 44px;
+  height: 40px;
+  background-image: url("../../images/Heart.png");
+  background-size: cover;
+  margin-bottom: 9.21px;
+}
+
+.heart__text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000;
+  margin: 0;
+}
+
+.bye {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 567px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000;
+  margin-bottom: 62px;
+}
+
+.bye p {
+  margin: 0 0 15px 0;
 }
