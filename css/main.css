@@ -49,6 +49,7 @@ body {
 .questions-block {
   width: 66.25%;
   max-width: 944px;
+  min-width: 944px;
   border: 1px solid #fff;
   box-shadow: 4px 4px 7px #E5E5E5;
   border-radius: 8px;
@@ -69,10 +70,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-}
-
-.question-buttons__wrapper--two-lines {
-  height: 100px;
+  margin-left: 17px;
 }
 
 /* удаление иконки очистки поля в IE */
@@ -86,7 +84,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .question-block {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .question-block__city {
@@ -94,21 +92,27 @@ input[type="password"]::-ms-reveal {
   background-image: none;
   background-color: transparent;
   box-shadow: none;
+  margin-left: 17px;
   box-sizing: border-box;
   width: 220px;
   height: 40px;
   padding: 0;
   border: 1px solid #6F7F8F;
   border-radius: 6px;
-  caret-color: #6F7F8F;
+  caret-color: #000000;
   background-color: #fff;
   padding-left: 21px;
-  color: #6F7F8F;
+  color: #000000;
   transition: border-color .2s ease-out;
 }
 
 .question-block__city:focus {
   outline: none;
+  border-color: #FFB300;
+  transition: border-color .2s ease-in;
+}
+
+.question-block__city:hover {
   border-color: #FFB300;
   transition: border-color .2s ease-in;
 }
@@ -120,6 +124,10 @@ input[type="password"]::-ms-reveal {
   font-size: 12px;
   line-height: 16px;
   color: rgba(111, 127, 143, 0.7);
+}
+
+.question-block:last-child {
+  margin-bottom: 100px;
 }
 
 .question {
@@ -151,6 +159,7 @@ input[type="password"]::-ms-reveal {
   padding: 0 20px 0 20px;
   white-space: nowrap;
   margin-right: 17px;
+  margin-bottom: 20px;
   transition: all .3 ease-in-out;
   cursor: pointer;
 }
@@ -173,7 +182,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .question--no-margin {
-  margin-bottom: 0;
+  margin-bottom: 3px;
 }
 
 .question__confidential {
@@ -184,6 +193,30 @@ input[type="password"]::-ms-reveal {
   font-size: 12px;
   line-height: 16px;
   color: #6F7F8F;
+}
+
+.no-display {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-flex {
+  display: flex;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1089px) {
+  .questions-wrapper {
+    padding: 20px 15px 56px 15px;
+  }
+  .question-wrapper {
+    width: 100%;
+  }
+  .question-block:last-child {
+    margin-bottom: 40px;
+  }
 }
 
 .introduction {
@@ -218,6 +251,12 @@ input[type="password"]::-ms-reveal {
   margin-bottom: 55px;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .introduction--margin {
+    margin-bottom: 32px;
+  }
+}
+
 .nav-wrapper {
   display: flex;
   align-items: center;
@@ -230,8 +269,12 @@ input[type="password"]::-ms-reveal {
   background-color: #fff;
 }
 
-.nav-wrapper--fixed {
-  position: fixed;
+.burger {
+  display: none;
+  width: 28px;
+  height: 19px;
+  background-image: url("../../images/burger.png");
+  background-size: cover;
 }
 
 .navbar {
@@ -245,6 +288,7 @@ input[type="password"]::-ms-reveal {
 
 .logo {
   width: 120px;
+  min-width: 120px;
   height: 46px;
   background-image: url("../../images/kiwitaxi-logo.svg");
   background-repeat: no-repeat;
@@ -363,11 +407,120 @@ input[type="password"]::-ms-reveal {
   cursor: pointer;
 }
 
+/* Desktop and iPad above 1089px ----------- */
+@media only screen and (min-width: 1089px) and (max-width: 1200px) {
+  .nav-wrapper {
+    padding: 0px 12px 0px 20px;
+  }
+  .dropdown {
+    min-width: 270px;
+  }
+  .menu--margin {
+    margin-right: 2%;
+  }
+  .menu {
+    min-width: 540px;
+  }
+}
+
+/* Desktop and iPad under 1089px ----------- */
+@media only screen and (min-width: 320px) and (max-width: 1089px) {
+  .menu {
+    display: none;
+  }
+  .dropdown {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .navbar {
+    width: 28px;
+  }
+  .nav-wrapper {
+    position: relative;
+    z-index: 10;
+    justify-content: space-between;
+    padding: 0px 16px 0px 17px;
+    margin-bottom: 0px;
+  }
+  .logo--margin {
+    margin: 0;
+  }
+  .questions-block {
+    width: 100%;
+    min-width: initial;
+    max-width: initial;
+  }
+}
+
+/* Desktop and iPad under 950px ----------- */
+@media only screen and (min-width: 320px) and (max-width: 950px) {
+  .nav-wrapper {
+    height: 52.08px;
+  }
+}
+
+/* iPads (landscape) ----------- */
+/* Mobile ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .nav-wrapper {
+    height: 52px;
+  }
+}
+
+.nav-arrows {
+  padding: 20.89px 23.61px 25.89px 62.9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-arrows .back-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-arrows .back-arrow {
+  width: 18.21px;
+  height: 12.21px;
+  background-image: url("../../../images/arrow-back.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.nav-arrows .back-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  color: #6F7F8F;
+  margin: 0;
+}
+
+.nav-arrows .close {
+  width: 12.77px;
+  height: 12.77px;
+  background-image: url("../../../images/close.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1089px) {
+  .nav-arrows {
+    padding: 21.91px 18.61px 20.89px 20.9px;
+  }
+}
+
 .progress {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 22px;
 }
 
 .progress--margin {
@@ -385,10 +538,11 @@ input[type="password"]::-ms-reveal {
   font-size: 11px;
   line-height: 15px;
   color: #E5E5E5;
+  padding-bottom: 3px;
 }
 
 .progress-line__line {
-  border: 1px solid #E5E5E5;
+  border: 3px solid #E5E5E5;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
@@ -400,6 +554,12 @@ input[type="password"]::-ms-reveal {
 .progress-line--active {
   color: #26A65B;
   border-color: #26A65B;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .progress--margin {
+    margin-bottom: 35px;
+  }
 }
 
 .next {
@@ -434,12 +594,13 @@ input[type="password"]::-ms-reveal {
 }
 
 .next-btn:hover {
-  background-color: #FFB300;
+  background-color: #0FCB5D;
 }
 
 .checkout-block {
   width: 66.25%;
   max-width: 944px;
+  min-width: 944px;
   border: 1px solid #fff;
   box-shadow: 4px 4px 7px #E5E5E5;
   border-radius: 8px;
@@ -448,7 +609,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .checkout__wrapper {
-  padding: 20px 113px 42px 59px;
+  padding: 53px 113px 64px 59px;
 }
 
 .heart {
@@ -456,6 +617,7 @@ input[type="password"]::-ms-reveal {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 40px;
 }
 
 .heart__img {
@@ -487,9 +649,25 @@ input[type="password"]::-ms-reveal {
   font-size: 14px;
   line-height: 19px;
   color: #000;
-  margin-bottom: 62px;
+  margin-bottom: 100px;
 }
 
 .bye p {
   margin: 0 0 15px 0;
 }
+
+.bye p:last-child {
+  margin: 0 0 0 0;
+}
+
+/* Desktop and iPad under 1089px ----------- */
+@media only screen and (min-width: 320px) and (max-width: 1089px) {
+  .checkout-block {
+    width: 100%;
+    min-width: initial;
+    max-width: initial;
+  }
+}
+
+/* iPads (landscape) ----------- */
+/* Mobile ----------- */

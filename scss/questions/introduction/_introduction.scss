@@ -20,3 +20,12 @@
     margin-bottom: 55px;
   }
 }
+
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 480px) {
+.introduction--margin {
+  margin-bottom: 32px;
+}
+}

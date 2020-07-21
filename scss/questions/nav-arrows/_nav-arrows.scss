@@ -1,0 +1,43 @@
+.nav-arrows {
+  padding: 20.89px 23.61px 25.89px 62.9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-arrows .back-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-arrows .back-arrow {
+  width: 18.21px;
+  height: 12.21px;
+  background-image: url('../../../images/arrow-back.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.nav-arrows .back-text {
+  @include setFont(11px, 15px, $gray-disclaimer-color);
+  margin: 0;
+}
+
+.nav-arrows .close {
+  width: 12.77px;
+  height: 12.77px;
+  background-image: url('../../../images/close.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 1089px) {
+  .nav-arrows {
+    padding: 21.91px 18.61px 20.89px 20.9px;
+  }
+}

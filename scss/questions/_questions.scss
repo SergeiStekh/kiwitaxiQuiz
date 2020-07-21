@@ -1,6 +1,7 @@
 .questions-block {
   width: 66.25%;
   max-width: 944px;
+  min-width: 944px;
   border: 1px solid #fff;
   box-shadow: 4px 4px 7px #E5E5E5;
   border-radius: 8px;
@@ -21,10 +22,7 @@
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-
-  &--two-lines {
-    height: 100px;
-  }
+  margin-left: 17px;
 }
 
 /* удаление иконки очистки поля в IE */
@@ -38,7 +36,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .question-block {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   &__city {
     // reset default styles
@@ -49,16 +47,17 @@ input[type="password"]::-ms-reveal {
     -moz-box-shadow: none;
     box-shadow: none;
 
+    margin-left: 17px;
     box-sizing: border-box;
     width: 220px;
     height: 40px;
     padding: 0;
     border: 1px solid $gray-border-color;
     border-radius: 6px;
-    caret-color: $gray-border-color;
+    caret-color: #000000;
     background-color: #fff;
     padding-left: 21px;
-    color: $gray-border-color;
+    color: #000000;
     transition: border-color .2s ease-out;
   
     &:focus {
@@ -67,10 +66,19 @@ input[type="password"]::-ms-reveal {
       transition: border-color .2s ease-in;
     }
 
+    &:hover {
+      border-color: $yellow-color;
+      transition: border-color .2s ease-in;
+    }
+
     &::placeholder {
       @include setFont(12px, 16px, $gray-text-color);
     }
   }
+}
+
+.question-block:last-child {
+  margin-bottom: 100px;
 }
 
 .question {
@@ -91,6 +99,7 @@ input[type="password"]::-ms-reveal {
     padding: 0 20px 0 20px;
     white-space: nowrap;
     margin-right: 17px;
+    margin-bottom: 20px;
     transition: all .3 ease-in-out;
     cursor: pointer;
 
@@ -103,6 +112,7 @@ input[type="password"]::-ms-reveal {
       transition: all .3 ease-in-out;
     }
 
+
     &:last-child {
       margin-right: 0px;
     }
@@ -113,11 +123,39 @@ input[type="password"]::-ms-reveal {
   }
 
   &--no-margin {
-    margin-bottom: 0;
+    margin-bottom: 3px;
   }
 
   &__confidential {
     margin-top: 0;
     @include setFont(12px, 16px, #6F7F8F);
   }
+}
+
+.no-display {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-flex {
+  display: flex;
+}
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 1089px) {
+  .questions-wrapper {
+    padding: 20px 15px 56px 15px;
+  }
+
+  .question-wrapper {
+    width: 100%;
+}
+
+.question-block:last-child {
+  margin-bottom: 40px;
+}
 }
