@@ -2,7 +2,8 @@
 @import './_bindings';
 @import './_mixins';
 @import './_body';
+@import './questions/_questions';
+@import './questions/introduction/_introduction';
 @import './nav-bar/_nav-bar';
-@import './progress-bar/_progress-bar';
-@import './button/button';
-@import './introduction/_introduction';
+@import './questions/progress/_progress';
+@import './questions/button/_button';

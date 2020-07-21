@@ -1,0 +1,29 @@
+.next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 466px;
+  height: 48px;
+  border-radius: 6px;
+  background: $green-color;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  @include setFont(14px, 19px, #fff);
+  font-weight: 600;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $yellow-color;
+  }
+}

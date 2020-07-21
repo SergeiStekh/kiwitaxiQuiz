@@ -13,10 +13,8 @@
   <header>
     <div class="nav-wrapper navbar-wrapper--fixed">
       <div class="logo logo--margin">
-        <a href="/">
-          <div class="logo-img"></div>
-        </a>
-      </div>
+        <a href=""></a>
+      </div> 
       <nav class="navbar">
         <div class="menu menu--margin">
           <a href="#">
@@ -49,6 +47,65 @@
   </div>
   </header>
   <main>
+    <section>
+      <article id="questions1" class="questions-block">
+        <div class="questions-wrapper">
+          <div class="progress progress--margin">
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">1</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num">2</div>
+              <div class="progress-line__line"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num">3</div>
+              <div class="progress-line__line"></div>
+            </div>
+          </div>
+          <div class="introduction introduction--margin">
+            <p>Евгений, расскажите о себе, чтобы мы могли сделать ваше путешествие максимально комфортным и выгодным.</p>
+            <p>Все ответы строго конфиденциальны и не передаются третьим лицам.</p>
+          </div>
+          <div class="question-wrapper">
+            <div class="question-block">
+              <p class="question">1. Вы сами бронируете жилье, покупаете билеты на самолет, страховку?</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button question-button__active"><p>Нет</p></div>
+                <div class="question-button"><p>Частично: иногда прибегаю к услугам агентов</p></div>
+                <div class="question-button"><p>Да</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question">2. Как вы оцениваете ваш уровень английского языка?</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button"><p>Не знаю английский</p></div>
+                <div class="question-button"><p>Могу изъясниться в аэропорту, отеле</p></div>
+                <div class="question-button"><p>Свободно говорю и понимаю</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question">3. Вы пользуетесь онлайн-сервисами и тревел-приложениями за рубежом?</p>
+              <div class="question-buttons__wrapper question-buttons__wrapper--two-lines">
+                <div class="question-button"><p>Нет, плохо в этом разбираюсь</p></div>
+                <div class="question-button"><p> Стараюсь все заказать заранее, но при необходимости разберусь</p></div>
+                <div class="question-button"><p>Всегда без проблем</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question">4. В каком городе вы проживаете</p>
+              <form method="GET" action="#" name="city">
+                <input type="text" name="city" class="question-block__city" placeholder="Москва" required>
+              </form>
+            </div>
+          </div>
+          <div class="next">
+            <button class="next-btn">Далее</button>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
 </body>
 </html>

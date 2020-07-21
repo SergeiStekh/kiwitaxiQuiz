@@ -1,0 +1,28 @@
+.progress {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--margin {
+    margin-bottom: 55px;
+  }
+
+  &-line {
+    width: 31.4578%;
+
+    &__num {
+      @include setFont(11px, 15px, #E5E5E5);
+    }
+
+    &__line {
+      border: 1px solid #E5E5E5;
+      @include setFont(11px, 15px, #E5E5E5);
+    }
+
+    &--active {
+      color: $green-color;
+      border-color: $green-color;
+    }
+  }
+}

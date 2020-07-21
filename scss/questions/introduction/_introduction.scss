@@ -1,0 +1,22 @@
+.introduction {
+  position: relative;
+
+  @include setFont(14px, 19px, #000);
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  p:first-child {
+    margin-bottom: 6px;
+  }
+
+  p:last-child {
+    @include setFont(12px, 16px, #6F7F8F);
+  }
+
+  &--margin {
+    margin-bottom: 55px;
+  }
+}
