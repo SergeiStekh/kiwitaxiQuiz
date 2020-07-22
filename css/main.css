@@ -146,7 +146,6 @@ input[type="password"]::-ms-reveal {
   justify-content: center;
   min-width: 100px;
   box-sizing: border-box;
-  height: 40px;
   border-radius: 6px;
   background-color: #fff;
   font-family: 'Open Sans';
@@ -157,7 +156,6 @@ input[type="password"]::-ms-reveal {
   color: #000;
   border: 1px solid #FFB300;
   padding: 0 20px 0 20px;
-  white-space: nowrap;
   margin-right: 17px;
   margin-bottom: 20px;
   transition: all .3 ease-in-out;
@@ -216,6 +214,13 @@ input[type="password"]::-ms-reveal {
   }
   .question-block:last-child {
     margin-bottom: 40px;
+  }
+}
+
+/* Mobile ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .question-button {
+    padding: 0 18px 0 18px;
   }
 }
 
