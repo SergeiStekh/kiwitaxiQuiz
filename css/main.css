@@ -88,6 +88,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .question-block__city {
+  /* reset default styles */
   border: none;
   background-image: none;
   background-color: transparent;
@@ -613,6 +614,12 @@ input[type="password"]::-ms-reveal {
   background-color: #0FCB5D;
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 .checkout-block {
   width: 66.25%;
   max-width: 944px;
