@@ -614,12 +614,6 @@ input[type="password"]::-ms-reveal {
   background-color: #0FCB5D;
 }
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
 .checkout-block {
   width: 66.25%;
   max-width: 944px;
@@ -702,7 +696,6 @@ input[type="password"]::-ms-reveal {
   }
 }
 
-/* iPads (landscape) ----------- */
 /* Mobile ----------- */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .checkout__wrapper {
