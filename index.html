@@ -4,11 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/main.css">
   <title>KiwiTaxi Quiz</title>
 </head>
-
 <body>
   <header>
     <div class="nav-wrapper">
@@ -137,9 +135,9 @@
             <div class="question-block">
               <p class="question">1. На каком этапе путешествия вы находитесь?</p>
               <div class="question-buttons__wrapper">
-                <div class="question-button question-button__active"><p>Собираюсь в поездку</p></div>
-                <div class="question-button"><p>Уже в поездке/путешествии</p></div>
-                <div class="question-button"><p>Возвращаюсь домой</p></div>
+                <div class="question-button question-button__active" id='prepare'><p>Собираюсь в поездку</p></div>
+                <div class="question-button" id="trip"><p>Уже в поездке/путешествии</p></div>
+                <div class="question-button" id="back"><p>Возвращаюсь домой</p></div>
               </div>
             </div>
           </div>
@@ -345,5 +343,6 @@
       </article>
     </section>
   </main>
+  <script src="./script.js"></script>
 </body>
 </html>
