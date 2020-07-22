@@ -1,2 +1,0 @@
-# kiwitaxiQuiz
-Quiz for KiwiTaxi

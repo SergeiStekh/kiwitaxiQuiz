@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>KiwiTaxi Quiz</title>
+</head>
+<body>
+  <header>
+    <div class="nav-wrapper">
+      <div class="logo logo--margin">
+        <a href=""></a>
+      </div> 
+      <nav class="navbar">
+        <div class="menu menu--margin">
+          <a href="#">
+            <span class="menu__item-label">Для клиентов</span>
+            <span class="menu__item-arrow menu__item-arrow--padding"></span>
+          </a>
+          <a href="#">
+            <span class="menu__item-label">Для партнёров</span>
+            <span class="menu__item-arrow menu__item-arrow--padding"></span>
+          </a>
+          <a href="#">
+            <span class="menu__item-label">Аренда авто с водителем</span>
+          </a>
+          <a href="#">
+            <span class="menu__item-label">Детский трансфер</span>
+          </a>
+        </div>
+        <div class="dropdown">
+          <a class="dropdown-currency dropdown-currency--margin">
+            <span class="dropdown-currency__label">RUB</span>
+          </a>
+          <a class="dropdown-country">
+            <span class="dropdown-country__flag"></span>
+          </a>
+          <div class="dropdown__separator"></div>
+          <a class="dropdown__help" target="_blank" href="/help">Помощь</a>
+          <button class="login-btn">Войти</button>
+        </div>
+        <div class="burger"></div>
+      </nav>
+  </div>
+  </header>
+  <main>
+    <section>
+      <article id="questions1" class="questions-block">
+        <div class="questions-wrapper">
+          <div class="progress progress--margin">
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">1</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num">2</div>
+              <div class="progress-line__line"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num">3</div>
+              <div class="progress-line__line"></div>
+            </div>
+          </div>
+          <div class="introduction introduction--margin">
+            <p>Евгений, расскажите о себе, чтобы мы могли сделать ваше путешествие максимально комфортным и выгодным.</p>
+            <p>Все ответы строго конфиденциальны и не передаются третьим лицам.</p>
+          </div>
+          <div class="question-wrapper">
+            <div class="question-block">
+              <p class="question">1. Вы сами бронируете жилье, покупаете билеты на самолет, страховку?</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button question-button__active"><p>Нет</p></div>
+                <div class="question-button"><p>Частично: иногда прибегаю к услугам агентов</p></div>
+                <div class="question-button"><p>Да</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question">2. Как вы оцениваете ваш уровень английского языка?</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button"><p>Не знаю английский</p></div>
+                <div class="question-button"><p>Могу изъясниться в аэропорту, отеле</p></div>
+                <div class="question-button"><p>Свободно говорю и понимаю</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question">3. Вы пользуетесь онлайн-сервисами и тревел-приложениями за рубежом?</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button"><p>Нет, плохо в этом разбираюсь</p></div>
+                <div class="question-button question-button--max-width"><p> Стараюсь все заказать заранее, но при необходимости разберусь</p></div>
+                <div class="question-button"><p>Всегда без проблем</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question">4. В каком городе вы проживаете</p>
+              <form method="GET" action="#" name="city">
+                <input type="text" name="city" class="question-block__city" placeholder="Москва" required>
+              </form>
+            </div>
+          </div>
+          <div class="next">
+            <button class="next-btn">Далее</button>
+          </div>
+        </div>
+      </article>
+      <article id="questions2" class="questions-block">
+        <div class="nav-arrows">
+          <div class="back-wrapper" id='back'>
+            <div class="back-arrow"></div>
+            <p class="back-text">Назад</p>
+          </div>
+          <div class="close" id="close"></div>
+        </div>
+        <div class="questions-wrapper">
+          <div class="progress progress--margin">
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">1</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">2</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num">3</div>
+              <div class="progress-line__line"></div>
+            </div>
+          </div>
+          <div class="introduction introduction--margin">
+            <p>Расскажите о предстоящей поездке</p>
+            <p>Все ответы строго конфиденциальны и не передаются третьим лицам.</p>
+          </div>
+          <div class="question-wrapper">
+            <div class="question-block question-block--margin">
+              <p class="question">1. На каком этапе путешествия вы находитесь?</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button question-button__active" id='prepare'><p>Собираюсь в поездку</p></div>
+                <div class="question-button" id="trip"><p>Уже в поездке/путешествии</p></div>
+                <div class="question-button" id="back"><p>Возвращаюсь домой</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="next">
+            <button class="next-btn">Далее</button>
+          </div>
+        </div>
+      </article>
+      <article id="questions3" class="questions-block">
+        <div class="nav-arrows">
+          <div class="back-wrapper" id='back'>
+            <div class="back-arrow"></div>
+            <p class="back-text">Назад</p>
+          </div>
+          <div class="close" id="close"></div>
+        </div>
+        <div class="questions-wrapper">
+          <div class="progress progress--margin">
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">1</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">2</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">3</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+          </div>
+          <div class="question-wrapper">
+            <div class="question-block">
+              <p class="question">1. Это ваша первая поездка в (место назначения)?</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button question-button__active"><p>Да</p></div>
+                <div class="question-button"><p>Нет, регулярно сюда приезжаю</p></div>
+                <div class="question-button"><p>Нет, был пару раз</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question">2. На сколько дней вы едете?</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button"><p>2 — 3 дня</p></div>
+                <div class="question-button"><p>На неделю</p></div>
+                <div class="question-button"><p>10 — 20 дней</p></div>
+                <div class="question-button"><p>Более месяца</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question">3. Какие у вас интересы в поездке?</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button"><p>Посетить музеи</p></div>
+                <div class="question-button"><p>Сходить в модные кафе</p></div>
+                <div class="question-button"><p>Экстремальные аттракционы</p></div>
+                <div class="question-button"><p>Лежать на пляже</p></div>
+                <div class="question-button"><p>Работа</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question">4. С кем вы едете в поездку</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button"><p>Один</p></div>
+                <div class="question-button"><p>Со второй половинкой</p></div>
+                <div class="question-button"><p>Всей семьей</p></div>
+                <div class="question-button"><p>Компанией</p></div>
+                <div class="question-button"><p>Один/одна с ребенком</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question question--no-margin">5. В какой город держите путь?</p>
+              <p class="question__confidential">Все ответы строго конфиденциальны и не передаются третьим лицам.</p>
+              <form method="GET" action="#" name="city">
+                <input type="text" name="city" class="question-block__city" placeholder="Barcelona" required>
+              </form>
+            </div>
+          </div>
+          <div class="next">
+            <button class="next-btn">Отправить</button>
+          </div>
+        </div>
+      </article>
+      <article id="questions4" class="questions-block">
+        <div class="nav-arrows">
+          <div class="back-wrapper" id='back'>
+            <div class="back-arrow"></div>
+            <p class="back-text">Назад</p>
+          </div>
+          <div class="close" id="close"></div>
+        </div>
+        <div class="questions-wrapper">
+          <div class="progress progress--margin">
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">1</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">2</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">3</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+          </div>
+          <div class="question-wrapper">
+            <div class="question-block">
+              <p class="question">1. Какие у вас интересы в поездке?</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button question-button__active"><p>Посетить музеи</p></div>
+                <div class="question-button"><p>Посмотреть достопримечательности</p></div>
+                <div class="question-button"><p>Сходить в модные кафе</p></div>
+                <div class="question-button"><p>Экстремальные аттракционны</p></div>
+                <div class="question-button"><p>Лежать на пляже</p></div>
+                <div class="question-button"><p>Работа</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question">2. С кем вы едете в поездку</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button"><p>Один</p></div>
+                <div class="question-button"><p>Со второй половинкой</p></div>
+                <div class="question-button"><p>Всей семьей</p></div>
+                <div class="question-button"><p>Компанией</p></div>
+                <div class="question-button"><p>Один/одна с ребенком</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question question--no-margin">3. В какой город держите путь?</p>
+              <p class="question__confidential">Например, если у вас трансфер/такси в Барселону, а потом вы планируете ехать в Салоу, то напишите Салоу.</p>
+              <form method="GET" action="#" name="city">
+                <input type="text" name="city" class="question-block__city" placeholder="Barcelona" required>
+              </form>
+            </div>
+          </div>
+          <div class="next">
+            <button class="next-btn">Отправить</button>
+          </div>
+        </div>
+      </article>
+      <article id="questions5" class="questions-block">
+        <div class="nav-arrows">
+          <div class="back-wrapper" id='back'>
+            <div class="back-arrow"></div>
+            <p class="back-text">Назад</p>
+          </div>
+          <div class="close" id="close"></div>
+        </div>
+        <div class="questions-wrapper">
+          <div class="progress progress--margin">
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">1</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">2</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+            <div class="progress-line">
+              <div class="progress-line__num progress-line--active">3</div>
+              <div class="progress-line__line progress-line--active"></div>
+            </div>
+          </div>
+          <div class="question-wrapper">
+            <div class="question-block">
+              <p class="question">1. С кем вы едете в поездку</p>
+              <div class="question-buttons__wrapper">
+                <div class="question-button question-button__active"><p>Один</p></div>
+                <div class="question-button"><p>Со второй половинкой</p></div>
+                <div class="question-button"><p>Всей семьей</p></div>
+                <div class="question-button"><p>Компанией</p></div>
+                <div class="question-button"><p>Один/одна с ребенком</p></div>
+              </div>
+            </div>
+            <div class="question-block">
+              <p class="question question--no-margin">2. В какой город держите путь?</p>
+              <p class="question__confidential">Например, если у вас трансфер/такси в Барселону, а потом вы планируете ехать в Салоу, то напишите Салоу.</p>
+              <form method="GET" action="#" name="city">
+                <input type="text" name="city" class="question-block__city" placeholder="Barcelona" required>
+              </form>
+            </div>
+          </div>
+          <div class="next">
+            <button class="next-btn">Отправить</button>
+          </div>
+        </div>
+      </article>
+      <article id="checkout" class="checkout-block">
+        <div class="checkout__wrapper">
+          <div class="heart">
+            <div class="heart__img"></div>
+            <p class="heart__text">Спасибо!</p>
+          </div>
+          <div class="bye">
+            <p>Все ответы записаны.</p>
+            <p>Мы отправим вам на почту варианты экскурсий и других услуг по выгодной цене,</p>
+            <p>которые подходят вашему типу отдыха.</p>
+          </div>
+          <div class="next">
+            <button class="next-btn">Закрыть</button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
