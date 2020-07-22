@@ -20,10 +20,10 @@ class Quiz {
 
   addListeners() {
     this.nextBtns.forEach(btn => btn.addEventListener('click', this.changeQuestionBlock));
-    this.questionBlocks[1].querySelector('.question-wrapper').addEventListener('click', this.setStatus);
+    this.questionBlocks[1].querySelector('.question-wrapper').addEventListener('click', this.setStatus.bind(this));
   }
 
-  setStatus = (e) => {
+  setStatus(e) {
     
     let target = e.target;
     if (target.className !== 'question' && target.tagName === 'P' && target.tagName !== "DIV") {
