@@ -19,7 +19,7 @@ class Quiz {
 
 
   addListeners() {
-    this.nextBtns.forEach(btn => btn.addEventListener('click', this.changeQuestionBlock));
+    this.nextBtns.forEach(btn => btn.addEventListener('click', this.changeQuestionBlock.bind(this)));
     this.questionBlocks[1].querySelector('.question-wrapper').addEventListener('click', this.setStatus.bind(this));
   }
 
@@ -61,7 +61,7 @@ class Quiz {
     }
   }
 
-  changeQuestionBlock = () => {
+  changeQuestionBlock() {
     let currentBlockNumber = this.state.currentQuestionBlock;
     const status = this.state.status;
 

@@ -31,6 +31,7 @@
   &__text {
     @include setFont(14px, 19px, #000);
     margin: 0;
+    font-weight: 600;
   }
 }
 
