@@ -667,7 +667,27 @@ input[type="password"]::-ms-reveal {
     min-width: initial;
     max-width: initial;
   }
+  .checkout__wrapper {
+    padding: 104.92px 73px 524px 128px;
+  }
+  .heart {
+    padding-bottom: 40px;
+  }
+  .bye {
+    margin-bottom: 100px;
+  }
 }
 
 /* iPads (landscape) ----------- */
 /* Mobile ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .checkout__wrapper {
+    padding: 59px 16px 64px 15px;
+  }
+  .heart {
+    padding-bottom: 43px;
+  }
+  .bye {
+    margin-bottom: 200px;
+  }
+}
